@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biniyam Haile | Visual Storyteller & Digital Architect</title>
+    <meta name="description" content="Professional portfolio of a multi-disciplinary creative.">
+    <meta property="og:title" content="Creative Portfolio | Visual Storyteller">
+    <meta property="og:description" content="Premium visual content creation and brand management services.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Biniyma<span>.</span>Haile</a>
+            <ul class="nav-links" id="navLinks"></ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle">AMH</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div id="mobileNavLinks"></div>
+    </div>
+
+    <!-- Hero -->
+    <!-- <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <span class="hero-label" id="heroLabel"></span>
+            <h1 id="heroTitle"></h1>
+            <p class="hero-subtitle" id="heroSubtitle"></p>
+            <div class="hero-cta" id="heroCta"></div>
+            <div class="hero-stats" id="heroStats"></div>
+        </div>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section> -->
+
+    <section class="hero" id="home">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <span class="hero-label" id="heroLabel"></span>
+            <h1 class="hero-title glitch" id="heroTitle" data-text=""></h1>
+            <p class="hero-subtitle" id="heroSubtitle"></p>
+            <div class="hero-cta" id="heroCta"></div>
+            <div class="hero-stats" id="heroStats"></div>
+        </div>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-up">
+                    <!-- <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&crop=face"
+                        alt="Professional portrait"> -->
+                    <img src="images/about-portrait.jpeg" alt="Professional portrait">
+                </div>
+                <div class="about-text fade-up">
+                    <span class="label" id="aboutLabel"></span>
+                    <h2 id="aboutTitle"></h2>
+                    <div class="divider"></div>
+                    <div id="aboutParagraphs"></div>
+                    <div class="skills-grid" id="skillsGrid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section-padding" id="experience" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="label" id="experienceLabel"></span>
+                <h2 id="experienceTitle"></h2>
+                <div class="divider"></div>
+                <p id="experienceDesc"></p>
+            </div>
+            <div class="experience-timeline" id="experienceTimeline"></div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section-padding" id="services">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="label" id="servicesLabel"></span>
+                <h2 id="servicesTitle"></h2>
+                <div class="divider"></div>
+                <p id="servicesDesc"></p>
+            </div>
+            <div class="services-grid" id="servicesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="section-padding" id="portfolio" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="label" id="portfolioLabel"></span>
+                <h2 id="portfolioTitle"></h2>
+                <div class="divider"></div>
+                <p id="portfolioDesc"></p>
+            </div>
+            <div class="portfolio-filters fade-up" id="portfolioFilters"></div>
+            <div class="portfolio-grid" id="portfolioGrid"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="label" id="testimonialsLabel"></span>
+                <h2 id="testimonialsTitle"></h2>
+                <div class="divider"></div>
+                <p id="testimonialsDesc"></p>
+            </div>
+            <div class="testimonials-grid" id="testimonialsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section-padding" id="contact" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="label" id="contactLabel"></span>
+                <h2 id="contactTitle"></h2>
+                <div class="divider"></div>
+                <p id="contactDesc"></p>
+            </div>
+            <div class="contact-centered">
+                <div class="contact-info fade-up">
+                    <h2 id="contactInfoTitle"></h2>
+                    <p id="contactInfoDesc"></p>
+                    <div class="contact-details" id="contactDetails"></div>
+                    <div class="social-links" id="socialLinks"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p id="footerText"></p>
+            <p class="footer-note" id="footerNote"></p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
